@@ -1,0 +1,603 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background-color: #eeeff1;
+    color: #1a1c20;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: #eeeff1;
+}
+
+.nav-left .logo {
+    color: #1a1c20;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #1a1c20;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4a76ee;
+}
+
+.gmail-btn {
+    background-color: #1a1c20;
+    color: #eeeff1;
+    padding: 0.375rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.gmail-btn:hover {
+    background-color: #2a2c30;
+    color: #eeeff1;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.nav-text {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 3rem 3rem 6rem;
+    margin: 0 0 6rem;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-text {
+    flex: 5;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1c20;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #1a1c20;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.section-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #4a76ee;
+    border-radius: 0.5rem;
+    color: #4a76ee;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+}
+
+.section-btn:hover {
+    color: #1a1c20;
+    border-color: #1a1c20;
+}
+
+.btn-icon {
+    flex-shrink: 0;
+}
+
+.hero-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Sections */
+.content-section {
+    padding: 4rem 3rem;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1c20;
+}
+
+/* Education Section */
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1c20;
+}
+
+.card-subtitle {
+    color: #4a76ee;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card-date {
+    color: #1a1c20;
+    margin-bottom: 0.75rem;
+}
+
+.card-description {
+    color: #1a1c20;
+    line-height: 1.8;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.project-accent {
+    height: 0.5rem;
+    background-color: #4a76ee;
+    border-radius: 0.75rem 0.75rem 0 0;
+    margin: -1.5rem -1.5rem 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(74, 118, 238, 0.1);
+    color: #4a76ee;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Achievements Section */
+.achievements-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    gap: 1rem;
+}
+
+.achievement-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(74, 118, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-icon svg {
+    color: #4a76ee;
+    stroke: #4a76ee;
+}
+
+.achievement-content {
+    flex: 1;
+}
+
+.achievement-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1c20;
+}
+
+/* Hobbies Section */
+.hobbies-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hobby-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.hobby-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(74, 118, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.hobby-icon svg {
+    color: #4a76ee;
+    stroke: #4a76ee;
+}
+
+.hobby-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #1a1c20;
+}
+
+/* Publications Section */
+.publications-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.publication-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    gap: 1rem;
+}
+
+.publication-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.publication-icon {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(74, 118, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publication-icon svg {
+    color: #4a76ee;
+    stroke: #4a76ee;
+}
+
+.publication-content {
+    flex: 1;
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1c20;
+}
+
+.publication-meta {
+    color: #4a76ee;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+.contact-container {
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.success-message {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #d1fae5;
+    border: 1px solid #6ee7b7;
+    color: #065f46;
+    border-radius: 0.5rem;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    color: #1a1c20;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: #1a1c20;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #4a76ee;
+}
+
+.form-textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #4a76ee;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #3a66de;
+}
+
+.contact-info {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-text {
+    color: #1a1c20;
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-email {
+    color: #4a76ee;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1c20;
+    color: white;
+    padding: 2rem 3rem;
+}
+
+.footer-content {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.footer-subtitle {
+    color: #9ca3af;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #4a76ee;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 3rem;
+    }
+    
+    .nav-text {
+        display: inline;
+    }
+
+    .navbar .nav-right a:last-child {
+
+        color: var(--text-color);
+        background-color: var(--background-color);
+
+    }
+
+    
+    .hero-section {
+        flex-direction: row;
+        padding: 4rem 3rem;
+        gap: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-description {
+        font-size: 1.25rem;
+    }
+    
+    .hero-image {
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    
+    .profile-img {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hobbies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-content {
+        flex-direction: row;
+    }
+    
+    .footer-info {
+        text-align: left;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
